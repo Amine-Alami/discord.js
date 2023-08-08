@@ -168,6 +168,12 @@ class Activity {
     this.url = data.url ?? null;
 
     /**
+     * This is added manually to get the sync ID of the activity
+     * @type {?string}
+     */
+    this.syncId = data.sync_id ?? null;
+
+    /**
      * Details about the activity
      * @type {?string}
      */
@@ -259,6 +265,7 @@ class Activity {
         this.name === activity.name &&
         this.type === activity.type &&
         this.url === activity.url &&
+        this.syncId === activity.syncId &&
         this.state === activity.state &&
         this.details === activity.details &&
         this.emoji?.id === activity.emoji?.id &&
